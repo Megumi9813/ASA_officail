@@ -18,7 +18,7 @@ function Booking({ teachers }) {
           </div>
           <ul className="booking_list color02">
             {calendarData.map((calendar) => (
-              <a href={calendar.url} target="_blank">
+              <a href={calendar.url} target="_blank" rel="noreferrer">
                 <li className="booking_item">
                   <h3>{calendar.title}</h3>
                   <div className="booking_item-info">

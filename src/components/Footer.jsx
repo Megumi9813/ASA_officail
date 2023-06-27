@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AsaLogoBrown from "../assets/AsaLogoBrown.png";
 import { Link } from "react-router-dom";
 import { serverTimestamp, addDoc, collection } from "firebase/firestore";

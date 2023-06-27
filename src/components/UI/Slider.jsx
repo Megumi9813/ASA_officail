@@ -106,6 +106,7 @@ function Slider({ testimonials }) {
             <p>({testimonials[currentSlide].country})</p>
             <img
               src={testimonials[currentSlide].picture}
+              alt="The picture of the student"
               style={{
                 maxWidth: "40px",
                 marginLeft: "10px",

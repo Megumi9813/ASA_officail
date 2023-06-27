@@ -9,7 +9,7 @@ function Program({ program }) {
       <div className="program_info">
         <h4 className="program_title font02 color02">{program.title}</h4>
         <p className="font01 color02">{program.para}</p>
-        <a href={program.link} target="_blank">
+        <a href={program.link} target="_blank" rel="noreferrer">
           <button
             className="btn"
             style={{ margin: "16px 0", cursor: "pointer" }}

@@ -65,6 +65,7 @@ function TestimonialSlider({ testimonials }) {
                 <p>({commentTestimonials[currentSlide].country})</p>
                 <img
                   src={commentTestimonials[currentSlide].picture}
+                  alt="The picture of the student"
                   style={{
                     maxWidth: "40px",
                     marginLeft: "10px",

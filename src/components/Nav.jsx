@@ -17,6 +17,7 @@ function Nav() {
       <a
         href="https://calendar.app.google/V2rLDpmnKm3UWAmC6"
         target="_blank"
+        rel="noreferrer"
         className="nav_newsBar color01 font02"
         style={{ textDecoration: "none" }}
       >
