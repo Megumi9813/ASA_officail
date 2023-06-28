@@ -15,8 +15,6 @@ function Team({ teachers }) {
 
   const shuffledTeachers = shuffleArray(displayTeachers);
 
-  console.log(shuffledTeachers);
-
   return (
     <section id="team">
       <div className="section_intro" style={{ maxWidth: "1200px" }}>
