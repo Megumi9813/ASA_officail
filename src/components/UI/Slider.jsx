@@ -104,15 +104,17 @@ function Slider({ testimonials }) {
               {testimonials[currentSlide].name}
             </p>
             <p>({testimonials[currentSlide].country})</p>
-            <img
-              src={testimonials[currentSlide].picture}
-              alt="The picture of the student"
-              style={{
-                maxWidth: "40px",
-                marginLeft: "10px",
-                borderRadius: "50%",
-              }}
-            />
+            {testimonials[currentSlide].picture && (
+              <img
+                src={testimonials[currentSlide].picture}
+                alt="The picture of the student"
+                style={{
+                  maxWidth: "40px",
+                  marginLeft: "10px",
+                  borderRadius: "50%",
+                }}
+              />
+            )}
           </div>
         </>
       )}

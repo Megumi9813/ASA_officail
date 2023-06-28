@@ -63,15 +63,17 @@ function TestimonialSlider({ testimonials }) {
                   {commentTestimonials[currentSlide].name}
                 </p>
                 <p>({commentTestimonials[currentSlide].country})</p>
-                <img
-                  src={commentTestimonials[currentSlide].picture}
-                  alt="The picture of the student"
-                  style={{
-                    maxWidth: "40px",
-                    marginLeft: "10px",
-                    borderRadius: "50%",
-                  }}
-                />
+                {commentTestimonials[currentSlide].picture && (
+                  <img
+                    src={commentTestimonials[currentSlide].picture}
+                    alt="The picture of the student"
+                    style={{
+                      maxWidth: "40px",
+                      marginLeft: "10px",
+                      borderRadius: "50%",
+                    }}
+                  />
+                )}
               </div>
             </>
           </div>

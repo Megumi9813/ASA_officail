@@ -3,6 +3,20 @@ import { Link } from "react-router-dom";
 import Teacher from "./UI/Teacher";
 
 function Team({ teachers }) {
+  const displayTeachers = teachers.filter(
+    (item) => item.role === "shareholder"
+  );
+
+  const shuffleArray = (array) => {
+    const shuffledArray = [...array];
+    shuffledArray.sort(() => Math.random() - 0.5);
+    return shuffledArray;
+  };
+
+  const shuffledTeachers = shuffleArray(displayTeachers);
+
+  console.log(shuffledTeachers);
+
   return (
     <section id="team">
       <div className="section_intro" style={{ maxWidth: "1200px" }}>
@@ -20,8 +34,7 @@ function Team({ teachers }) {
       <div className="teacher_list-container">
         <div className="container">
           <ul className="teacher_list">
-            {teachers
-              .sort((a, b) => a.order - b.order)
+            {shuffledTeachers
               .slice(0, 4)
               .map((teacher) => (
                 <Teacher teacher={teacher} key={teacher.id} />
