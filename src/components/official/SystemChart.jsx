@@ -1,5 +1,4 @@
-import React from "react";
-import SystemImg from "../assets/SystemImg.jpg";
+import SystemImg from "../../assets/SystemImg.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCommentDots } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";

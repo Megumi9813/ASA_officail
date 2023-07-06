@@ -1,9 +1,9 @@
-import Nav from "../components/Nav";
+import Nav from "../../components/official/Nav";
 
 export default function BlogPage(blog) {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <section id="blogPage">
         <div className="container" style={{ maxWidth: "65%" }}>
           <div className="section_intro">

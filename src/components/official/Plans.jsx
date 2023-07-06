@@ -1,4 +1,4 @@
-import { programData } from "../programData";
+import { programData } from "../../programData";
 import { Link } from "react-router-dom";
 
 function Plans() {

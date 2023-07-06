@@ -1,8 +1,8 @@
 import { useState } from "react";
-import AsaLogoBrown from "../assets/AsaLogoBrown.png";
+import AsaLogoBrown from "../../assets/AsaLogoBrown.png";
 import { Link } from "react-router-dom";
 import { serverTimestamp, addDoc, collection } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../../firebase";
 
 function Footer() {
   const [submitted, setSubmitted] = useState(
@@ -76,7 +76,7 @@ function Footer() {
                   <Link to="/Programs">Programs</Link>
                 </li>
                 <li className="link_item">
-                  <Link to="/Booking">Book a Test</Link>
+                  <Link to="/Booking">Free assessment</Link>
                 </li>
                 <li className="link_item">
                   <Link to="/Blog">Blog</Link>

@@ -1,25 +1,32 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import "./App.scss";
-import Contact from "./components/Contact";
+import Home from "./pages/official/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./style/App.scss";
+import Contact from "./components/official/Contact";
 import { db } from "./firebase";
 import { collection, getDocs } from "firebase/firestore";
-import ScrollToTop from "./components/ScrollToTop";
-import About from "./pages/About";
-import Programs from "./pages/Programs";
-import Book from "./pages/Book";
-import Blogs from "./pages/Blogs";
-import ProgramIntro from "./pages/ProgramIntro";
-import BlogPage from "./pages/BlogPage";
-import Footer from "./components/Footer";
+import ScrollToTop from "./components/official/ScrollToTop";
+import About from "./pages/official/About";
+import Programs from "./pages/official/Programs";
+import Book from "./pages/official/Book";
+import Blogs from "./pages/official/Blogs";
+import ProgramIntro from "./pages/official/ProgramIntro";
+import BlogPage from "./pages/official/BlogPage";
+import Footer from "./components/official/Footer";
 import ScrollBackToTop from "./ScrollBackToTop";
+import { useLocation } from "react-router-dom";
+import MembershipHome from "./pages/membership/MembershipHome";
+import './style/tailwind.css';
+import MembershipNav from "./components/membership/MembershipNav";
+import Nav from "./components/official/Nav";
 
 function App() {
   ScrollBackToTop();
   const [teachers, setTeachers] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [testimonials, setTestimonials] = useState([]);
+  const [contactOpen, setContactOpen] = useState(false);
 
   useEffect(() => {
     const fetchTeachers = async () => {
@@ -63,10 +70,17 @@ function App() {
     fetchTestimonials();
   }, []);
 
+  const location = useLocation();
+  const isMembershipSite = location.pathname.startsWith("/membership");
+
   return (
     <div className="App">
-      <Contact />
-      <ScrollToTop />
+      {!isMembershipSite && (
+        <Contact contactOpen={contactOpen} setContactOpen={setContactOpen} />
+      )}
+      {!isMembershipSite && <ScrollToTop />}
+      {isMembershipSite && <MembershipNav />}
+      <Nav contactOpen={contactOpen} setContactOpen={setContactOpen} />
       <Routes>
         <Route
           path="/"
@@ -90,8 +104,13 @@ function App() {
               element={<BlogPage blog={blog} />}
             />
           ))}
+        {isMembershipSite && (
+          <>
+            <Route path="/membership" element={<MembershipHome />} />
+          </>
+        )}
       </Routes>
-      <Footer />
+      {!isMembershipSite && <Footer />}
     </div>
   );
 }

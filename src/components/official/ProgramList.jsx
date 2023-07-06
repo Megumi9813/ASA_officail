@@ -1,5 +1,5 @@
 import Program from "./UI/Program";
-import { programData } from "../programData";
+import { programData } from "../../programData";
 
 function ProgramList() {
   return (

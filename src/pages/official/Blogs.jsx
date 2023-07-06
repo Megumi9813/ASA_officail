@@ -1,11 +1,11 @@
 import React from "react";
-import BlogList from "../components/BlogList";
-import Nav from "../components/Nav";
+import BlogList from "../../components/official/BlogList";
+import Nav from "../../components/official/Nav";
 
 function Blogs({ blogs }) {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <BlogList blogs={blogs} />
     </>
   );

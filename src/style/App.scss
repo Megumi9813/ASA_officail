@@ -47,6 +47,12 @@ section {
   font-size: 0.8rem;
 }
 
+.btn:hover,
+.submitted-btn:hover {
+  background-color: #ba8a6e;
+  color: #fbfbf3;
+}
+
 .btn {
   padding: 15px 40px;
 }
@@ -204,6 +210,7 @@ section {
               }
               textarea {
                 height: 100px;
+                resize: none;
               }
             }
             button {
@@ -224,6 +231,7 @@ section {
 
   .open {
     display: block;
+    // opacity: 1;
   }
   .modal__overlay {
     border-radius: 8px 8px;
@@ -1471,6 +1479,94 @@ nav {
       }
     }
   }
+}
+
+.membershipLogin {
+  .modal-dialog {
+  top: 20%;
+  .modal-content {
+    max-width: 400px;
+    margin: 0 auto;
+
+    .modal-header {
+      display: block;
+      position: relative;
+      padding-top: 48px;
+      border-bottom: none;
+      .modal-title {
+        width: 100%;
+        text-align: center;
+      }
+      .btn-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+    }
+    .modal-body {
+      padding: 16px 32px;
+      .form-group {
+        .form-item {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 16px;
+          label {
+            color: #606266;
+            font-weight: 500;
+            margin-bottom: 4px;
+          }
+          input::placeholder {
+            color: #c0c4cc;
+          }
+          input {
+            padding: 0 16px;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid #dcdfe6;
+          }
+          .password {
+            font-size: 8px;
+          }
+        }
+        .auth_switch {
+          margin-bottom: 8px;
+          color: #606266;
+          font-size: 14px;
+          span {
+            text-decoration: underline;
+            padding-left: 8px;
+            cursor: pointer;
+            color: #c49275;
+          }
+        }
+        .authToForgotPW {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        a {
+          text-decoration: underline;
+        }
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+      }
+      .btn-success {
+        font-weight: bold;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        background-color: #c49275;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 300;
+        height: 40px;
+        margin-bottom: 16px;
+        width: 100%;
+      }
+    }
+  }
+}
 }
 
 @media (min-width: 1024px) {

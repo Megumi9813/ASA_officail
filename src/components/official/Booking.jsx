@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { calendarData } from "../calendarData";
+import { calendarData } from "../../calendarData";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 function Booking({ teachers }) {
@@ -26,7 +26,7 @@ function Booking({ teachers }) {
                       <FontAwesomeIcon icon={faClock} />
                       55 minutes
                     </div>
-                    <button className="btn">Book a Test</button>
+                    <button className="btn">Free assessment</button>
                   </div>
                 </li>
               </a>

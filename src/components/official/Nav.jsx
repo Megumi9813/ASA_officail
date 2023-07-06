@@ -1,10 +1,10 @@
-import AsaLogo from "../assets/AsaLogo.png";
+import AsaLogo from "../../assets/AsaLogo.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-function Nav() {
+function Nav({ contactOpen, setContactOpen }) {
   function openMenu() {
     document.body.classList += " menu-open";
   }
@@ -40,12 +40,22 @@ function Nav() {
           </li>
           <li className="nav_list">
             <Link to="/Booking" className="nav_link font01">
-              Book a Test
+              Free assessment
             </Link>
           </li>
           <li className="nav_list">
             <Link to="/Blog" className="nav_link font01">
               Blog
+            </Link>
+          </li>
+          <li>
+            <Link to="#">
+              <button
+                className="nav_link font01"
+                onClick={() => setContactOpen(!contactOpen)}
+              >
+                Contact
+              </button>
             </Link>
           </li>
           {/* <Link to="/asa_membership" target="_blank" rel="noopener noreferrer">
@@ -80,7 +90,7 @@ function Nav() {
             </li>
             <li className="menu_list">
               <Link to="/Booking" className="menu__ink" onClick={closeMenu}>
-                Book a Test
+                Free assessment
               </Link>
             </li>
             <li className="menu_list">

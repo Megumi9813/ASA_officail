@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import ContactImg from "../assets/Contact.webp";
+import { useState, useRef } from "react";
+import ContactImg from "../../assets/Contact.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -7,9 +7,7 @@ import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 
-
-function Contact() {
-  const [contactOpen, setContactOpen] = useState(false);
+function Contact({ contactOpen, setContactOpen }) {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -62,7 +60,12 @@ function Contact() {
               <form ref={form} onSubmit={sendEmail}>
                 <div className="form__item">
                   <label className="form_item-label">Name</label>
-                  <input className="input" name="user_name" type="text"></input>
+                  <input
+                    className="input"
+                    name="user_name"
+                    type="text"
+                    required
+                  ></input>
                 </div>
                 <div className="form__item">
                   <label className="form_item-label">Email</label>
@@ -70,6 +73,7 @@ function Contact() {
                     className="input"
                     name="user_email"
                     type="email"
+                    required
                   ></input>
                 </div>
                 <div className="form__item">
@@ -78,6 +82,7 @@ function Contact() {
                     className="input"
                     name="message"
                     type="text"
+                    required
                   ></textarea>
                 </div>
                 <button id="contact_submit" className="form_submit">
