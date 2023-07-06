@@ -40,7 +40,7 @@ function Nav({ contactOpen, setContactOpen }) {
           </li>
           <li className="nav_list">
             <Link to="/Booking" className="nav_link font01">
-              Free assessment
+              Free Assessment
             </Link>
           </li>
           <li className="nav_list">
@@ -90,7 +90,7 @@ function Nav({ contactOpen, setContactOpen }) {
             </li>
             <li className="menu_list">
               <Link to="/Booking" className="menu__ink" onClick={closeMenu}>
-                Free assessment
+                Free Assessment
               </Link>
             </li>
             <li className="menu_list">
